@@ -9,4 +9,7 @@ Disaster Alert entry application
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <plugin name="cordova-plugin-camera" spec="~4.0.1" />
+    <plugin name="cordova-plugin-geolocation" spec="~4.0.1" />
+    <plugin name="cordova-plugin-media-capture" spec="~3.0.1" />
 </widget>
