@@ -69,7 +69,7 @@ $$('#my-login-screen .login-button').on('click', function () {
 });
 
 
-myApp.onPageInit('settings', function (page) {
+app.onPageInit('settings', function (page) {
     // some stuff soon
     var pictureSource;   // picture source
     var destinationType; // sets the format of returned value
@@ -157,7 +157,7 @@ myApp.onPageInit('settings', function (page) {
       alert('Failed because: ' + message);
     }
 
-    $$('#capturePhoto').on('click', function () {
+    $$('#capturePhotobutton').on('click', function () {
         capturePhoto();
     });
 
