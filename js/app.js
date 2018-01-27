@@ -68,10 +68,13 @@ $$('#my-login-screen .login-button').on('click', function () {
   app.dialog.alert('Username: ' + username + '<br>Password: ' + password);
 });
 
-
-app.onPageInit('settings', function (page) {
-    // some stuff soon
-    var pictureSource;   // picture source
+$$(document).on('page:init', '.page[data-name="about"]', function (e) {
+  // Do something here when page with data-name="about" attribute loaded and initialized
+  
+    	       	console.log("about page load");
+    	       	       	app.dialog.alert('about page load!');
+    	       	       	
+    	       	       	var pictureSource;   // picture source
     var destinationType; // sets the format of returned value
 
     // Wait for device API libraries to load
@@ -156,20 +159,9 @@ app.onPageInit('settings', function (page) {
     function onFail(message) {
       alert('Failed because: ' + message);
     }
-
+    
     $$('#capturePhotobutton').on('click', function () {
+    	
         capturePhoto();
     });
-
-    $$('#capturePhotoEdit').on('click', function () {
-        capturePhotoEdit();
-    });
-
-    $$('#photoLibrary').on('click', function () {
-        getPhoto(pictureSource.PHOTOLIBRARY);
-    });
-
-    $$('#photoAlbum').on('click', function () {
-        getPhoto(pictureSource.SAVEDPHOTOALBUM);
-    });
-});
+})  
